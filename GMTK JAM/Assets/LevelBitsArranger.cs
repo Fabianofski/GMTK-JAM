@@ -2,15 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityAtoms.BaseAtoms;
 
 public class LevelBitsArranger : MonoBehaviour
 {
+
+    [Header("")]
+    [SerializeField] BoolVariable LevelIsArranged;
+    [SerializeField] LeanTweenType TweenScaleType;
 
     [Header("Level Bit Properties")]
     [SerializeField] LayerMask levelBitLayer;
     GameObject levelBit;
     Vector2 offset;
     Vector2 originalPos;
+
+    private void Awake()
+    {
+        SetUpLevelBits(true);
+    }
+
+    public void SetUpLevelBits(bool _defaultPos)
+    {
+        foreach (Transform child in transform)
+        {
+            if (_defaultPos)
+                LeanTween.value(1f, 0.8f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
+                { child.localScale = new Vector2(value, value); });
+            else
+                LeanTween.value(0.8f, 1f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
+                { child.localScale = new Vector2(value, value); }).setOnComplete(() => { LevelIsArranged.Value = false; }) ;
+        }
+
+    }
 
     private void Update()
     {
@@ -25,11 +49,13 @@ public class LevelBitsArranger : MonoBehaviour
         levelBit.transform.position = _mousePos;
     }
 
-    public void Click(InputAction.CallbackContext _context)
+    public void Click(bool _isPressed)
     {
-        if (_context.performed)
+        if (!LevelIsArranged.Value) return;
+
+        if (_isPressed)
             ClickLevelBit();
-        else if (_context.canceled && levelBit)
+        else 
             ReleaseLevelBit();
     }
 
