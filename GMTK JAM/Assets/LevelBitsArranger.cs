@@ -19,19 +19,33 @@ public class LevelBitsArranger : MonoBehaviour
 
     private void Awake()
     {
+        Invoke("Temp", 2f);
+    }
+
+    void Temp()
+    {
         SetUpLevelBits(true);
     }
 
     public void SetUpLevelBits(bool _defaultPos)
     {
-        foreach (Transform child in transform)
+        foreach (Transform _child in transform)
         {
+            SpriteRenderer _spriteRenderer = _child.GetComponent<SpriteRenderer>();
+            LeanTween.value(0f, 1f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
+            {
+                float _a = _defaultPos ? value : 1 - value;
+                Color _color = _spriteRenderer.color;
+                _color.a = _a;
+                _spriteRenderer.color = _color;
+            });
+
             if (_defaultPos)
                 LeanTween.value(1f, 0.8f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
-                { child.localScale = new Vector2(value, value); });
+                { _child.localScale = new Vector2(value, value); });
             else
                 LeanTween.value(0.8f, 1f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
-                { child.localScale = new Vector2(value, value); }).setOnComplete(() => { LevelIsArranged.Value = false; }) ;
+                { _child.localScale = new Vector2(value, value); }).setOnComplete(() => { LevelIsArranged.Value = false; }) ;
         }
 
     }
@@ -55,7 +69,7 @@ public class LevelBitsArranger : MonoBehaviour
 
         if (_isPressed)
             ClickLevelBit();
-        else 
+        else if(levelBit)
             ReleaseLevelBit();
     }
 
