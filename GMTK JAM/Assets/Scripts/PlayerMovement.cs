@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     Vector2 input;
     [SerializeField] IntConstant speedConstant;
+    [SerializeField] BoolVariable canMove;
 
     [Header("Jump")]
     [SerializeField] IntConstant JumpForceConstant;
@@ -41,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!canMove.Value)
+            return;
+
         Move();
         BetterJump();
         CheckIfPlayerIsGrounded();
@@ -61,6 +65,9 @@ public class PlayerMovement : MonoBehaviour
     #region Jumping
     public void OnJump(InputValue _value)
     {
+        if (!canMove.Value)
+            return;
+
         PlayerIsPressingJump = _value.isPressed;
         TryToPerformJump();
     }

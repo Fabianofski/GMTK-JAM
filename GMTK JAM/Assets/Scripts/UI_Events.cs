@@ -31,6 +31,16 @@ public class UI_Events:MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public void QuitGame()
     {

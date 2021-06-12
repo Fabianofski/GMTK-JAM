@@ -10,6 +10,7 @@ public class LevelBitsArranger : MonoBehaviour
     [Header("")]
     [SerializeField] BoolVariable LevelIsArranged;
     [SerializeField] LeanTweenType TweenScaleType;
+    [SerializeField] BoolVariable PlayerCanMove;
 
     [Header("Level Bit Properties")]
     [SerializeField] LayerMask levelBitLayer;
@@ -29,6 +30,8 @@ public class LevelBitsArranger : MonoBehaviour
 
     public void SetUpLevelBits(bool _defaultPos)
     {
+        PlayerCanMove.Value = !_defaultPos;
+
         foreach (Transform _child in transform)
         {
             SpriteRenderer _spriteRenderer = _child.GetComponent<SpriteRenderer>();
@@ -40,12 +43,15 @@ public class LevelBitsArranger : MonoBehaviour
                 _spriteRenderer.color = _color;
             });
 
-            if (_defaultPos)
-                LeanTween.value(1f, 0.8f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
-                { _child.localScale = new Vector2(value, value); });
-            else
-                LeanTween.value(0.8f, 1f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
-                { _child.localScale = new Vector2(value, value); }).setOnComplete(() => { LevelIsArranged.Value = false; }) ;
+            if (_child.name != "BG")
+            {
+                if (_defaultPos)
+                    LeanTween.value(1f, 0.8f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
+                    { _child.localScale = new Vector2(value, value); });
+                else
+                    LeanTween.value(0.8f, 1f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
+                    { _child.localScale = new Vector2(value, value); }).setOnComplete(() => { LevelIsArranged.Value = false; });
+            }
         }
 
     }
