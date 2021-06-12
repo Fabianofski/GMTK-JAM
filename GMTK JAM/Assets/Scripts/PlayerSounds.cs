@@ -7,6 +7,12 @@ public class PlayerSounds : MonoBehaviour
 
     [SerializeField] GameObject[] FootStepSounds;
     [SerializeField] GameObject JumpSound;
+    [SerializeField] Transform startPos;
+
+    private void Awake()
+    {
+        
+    }
 
     public void PlayFootStepSound()
     {
@@ -22,11 +28,10 @@ public class PlayerSounds : MonoBehaviour
         Destroy(_sound, 1f);
     }
 
-    public void PlayImpactSound()
+
+    public void Die()
     {
-
+        transform.parent.position = startPos.position;
+        transform.parent.parent = startPos.parent;
     }
-
-
-
 }

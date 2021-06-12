@@ -22,6 +22,10 @@ public class Block : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         ogBlock = spriteRenderer.sprite;
+    }
+
+    public void UpdateOgPos()
+    {
         ogpos = transform.position;
     }
 
@@ -36,7 +40,7 @@ public class Block : MonoBehaviour
         _sound.GetComponent<AudioSource>().pitch = Random.Range(1f, 1.4f);
         Destroy(_sound, 1f);
 
-        transform.position = ogpos;
+        transform.position = new Vector2(transform.position.x ,ogpos.y);
         LeanTween.moveY(gameObject, ogpos.y + CoinHeight, .5f).setEase(TweenMoveType);
 
         if(GetComponent<Animator>())

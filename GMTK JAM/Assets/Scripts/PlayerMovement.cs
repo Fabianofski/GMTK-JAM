@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform feet;
     [SerializeField] float radius;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask LevelBitLayer;
     bool PlayerIsGrounded;
 
     [SerializeField] BoolEventReference FireEvent;
@@ -130,4 +131,19 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("PlayerIsJumping", _vel > 0);
         animator.SetBool("PlayerIsWalking", input.x != 0);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LevelBitLayer)
+            transform.parent = collision.gameObject.transform;
+    }
+
+    public void ConstrainPlayer(bool _state)
+    {
+        rb2d.isKinematic = _state;
+
+        rb2d.constraints = RigidbodyConstraints2D.None;
+        rb2d.constraints = _state ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.FreezeRotation;
+    }
+
 }
