@@ -11,12 +11,14 @@ public class Goal : MonoBehaviour
     [SerializeField] int CoinsCollected = 0;
     [SerializeField] BoolEvent ReachedGoalEvent;
     [SerializeField] BoolVariable GoalIsUnlocked;
+    [SerializeField] BoolVariable GameEnded;
     [SerializeField] BoolEvent GoalIsUnlockedEvent;
 
     private void Awake()
     {
         TotalCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
         GoalIsUnlocked.Reset();
+        GameEnded.Reset();
     }
 
     public void CollectCoin(int _amount)
@@ -34,8 +36,10 @@ public class Goal : MonoBehaviour
     {
         if (collision.CompareTag("Player") && GoalIsUnlocked.Value)
         {
+            collision.transform.position = transform.position;
             Debug.Log("Reached Goal");
             ReachedGoalEvent.Raise(true);
+            GameEnded.Value = true;
         }
     }
 

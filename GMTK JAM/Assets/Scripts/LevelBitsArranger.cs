@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityAtoms.BaseAtoms;
+using UnityEngine.Rendering;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class LevelBitsArranger : MonoBehaviour
 {
@@ -11,6 +13,11 @@ public class LevelBitsArranger : MonoBehaviour
     [SerializeField] BoolVariable LevelIsArranged;
     [SerializeField] LeanTweenType TweenScaleType;
     [SerializeField] BoolVariable PlayerCanMove;
+    [SerializeField] BoolVariable GameEnded;
+
+    [Header("Sounds")]
+    [SerializeField] GameObject ClickSound;
+    [SerializeField] GameObject ReleaseSound;
 
     [Header("Level Bit Properties")]
     [SerializeField] LayerMask levelBitLayer;
@@ -30,6 +37,8 @@ public class LevelBitsArranger : MonoBehaviour
 
     public void SetUpLevelBits(bool _defaultPos)
     {
+        if (GameEnded.Value) return;
+
         PlayerCanMove.Value = !_defaultPos;
 
         foreach (Transform _child in transform)
@@ -94,6 +103,11 @@ public class LevelBitsArranger : MonoBehaviour
         levelBit = GetLevelBit(_mousePos);
         if (levelBit)
         {
+            GameObject _sound = Instantiate(ClickSound);
+            _sound.GetComponent<AudioSource>().pitch = Random.Range(1f, 1.4f);
+            Destroy(_sound, 1f);
+
+            levelBit.GetComponent<SortingGroup>().sortingOrder += 1;
             originalPos = levelBit.transform.position;
             offset = _mousePos - originalPos;
         }
@@ -101,6 +115,12 @@ public class LevelBitsArranger : MonoBehaviour
 
     private void ReleaseLevelBit()
     {
+        GameObject _sound = Instantiate(ReleaseSound);
+        _sound.GetComponent<AudioSource>().pitch = Random.Range(1f, 1.4f);
+        Destroy(_sound, 1f);
+
+        levelBit.GetComponent<SortingGroup>().sortingOrder -= 1;
+
         levelBit.layer = 0;
         Collider2D _col = Physics2D.OverlapBox(levelBit.transform.position, levelBit.transform.localScale, 0f, levelBitLayer);
         levelBit.layer = 6;

@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 2356b45dacc3bb64fac0f7d6b4a05257
+guid: aba3317a91c084c4697e04ae6f888b7d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2636446900402747224
-    second: ButtonJoin_0
+      213: -6214050641881895830
+    second: ToborEnemy_0
   - first:
-      213: -7803338688985450775
-    second: ButtonJoin_1
+      213: -4825427481702493012
+    second: ToborEnemy_1
+  - first:
+      213: -8183644452086846973
+    second: ToborEnemy_2
+  - first:
+      213: -269490138855565751
+    second: ToborEnemy_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonJoin_0
+      name: ToborEnemy_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 25
+        width: 8
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a880583385796bd0800000000000000
-      internalID: -2636446900402747224
+      spriteID: a6c675a5dd143c9a0800000000000000
+      internalID: -6214050641881895830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButtonJoin_1
+      name: ToborEnemy_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 8
         y: 0
-        width: 40
-        height: 25
+        width: 8
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +162,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e6b5f46ec8f4b390800000000000000
-      internalID: -7803338688985450775
+      spriteID: ca417b78543a80db0800000000000000
+      internalID: -4825427481702493012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToborEnemy_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a6449cabadd6e80800000000000000
+      internalID: -8183644452086846973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToborEnemy_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9461b038524924cf0800000000000000
+      internalID: -269490138855565751
       vertices: []
       indices: 
       edges: []

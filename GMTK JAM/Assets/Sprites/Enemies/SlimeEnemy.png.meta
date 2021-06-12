@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 2356b45dacc3bb64fac0f7d6b4a05257
+guid: 1da47cecbc9c8cd47b4497739567c027
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2636446900402747224
-    second: ButtonJoin_0
+      213: 2635162760147451602
+    second: SlimeEnemy_0
   - first:
-      213: -7803338688985450775
-    second: ButtonJoin_1
+      213: -2030426751889620715
+    second: SlimeEnemy_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonJoin_0
+      name: SlimeEnemy_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 25
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a880583385796bd0800000000000000
-      internalID: -2636446900402747224
+      spriteID: 2de3de3919af19420800000000000000
+      internalID: 2635162760147451602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButtonJoin_1
+      name: SlimeEnemy_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 8
         y: 0
-        width: 40
-        height: 25
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e6b5f46ec8f4b390800000000000000
-      internalID: -7803338688985450775
+      spriteID: 5114b2770a972d3e0800000000000000
+      internalID: -2030426751889620715
       vertices: []
       indices: 
       edges: []

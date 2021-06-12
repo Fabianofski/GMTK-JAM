@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 2356b45dacc3bb64fac0f7d6b4a05257
+guid: ac7861e152d142a4e9839129126ed5a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2636446900402747224
-    second: ButtonJoin_0
+      213: -3611481155690444401
+    second: NextLvlIcons_0
   - first:
-      213: -7803338688985450775
-    second: ButtonJoin_1
+      213: 8185984195122667323
+    second: NextLvlIcons_1
+  - first:
+      213: -2403130830562548068
+    second: NextLvlIcons_2
+  - first:
+      213: 4719021234854794940
+    second: NextLvlIcons_3
+  - first:
+      213: -3326641671480494828
+    second: NextLvlIcons_4
+  - first:
+      213: 4494333456678796466
+    second: NextLvlIcons_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,43 +133,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonJoin_0
+      name: NextLvlIcons_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 40
-        height: 25
+        y: 14
+        width: 33
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a880583385796bd0800000000000000
-      internalID: -2636446900402747224
+      spriteID: f89cd0af50171edc0800000000000000
+      internalID: -3611481155690444401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButtonJoin_1
+      name: NextLvlIcons_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 40
-        height: 25
+        x: 46
+        y: 14
+        width: 33
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e6b5f46ec8f4b390800000000000000
-      internalID: -7803338688985450775
+      spriteID: b3f9f3711457a9170800000000000000
+      internalID: 8185984195122667323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NextLvlIcons_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7
+        width: 45
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96a78fed3d56aed0800000000000000
+      internalID: -2403130830562548068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NextLvlIcons_3
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7
+        width: 45
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb69b078fc45d7140800000000000000
+      internalID: 4719021234854794940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NextLvlIcons_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 45
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415b46c660565d1d0800000000000000
+      internalID: -3326641671480494828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NextLvlIcons_5
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 45
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc3e7387741f5e30800000000000000
+      internalID: 4494333456678796466
       vertices: []
       indices: 
       edges: []

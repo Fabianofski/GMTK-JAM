@@ -10,6 +10,7 @@ public class UI_Events:MonoBehaviour
 {
     public AudioMixer mixer { private get; set; }
     [SerializeField] VoidEvent UpdateUIEvent;
+    [SerializeField] GameObject PopSound;
 
     private void Awake()
     {
@@ -57,6 +58,7 @@ public class UI_Events:MonoBehaviour
         PlayerPrefs.SetFloat(mixer.name, _volume);
         PlayerPrefs.Save();
 
+        PlaySound(PopSound);
         _volume = Mathf.Log(_volume) * 20;
         mixer.SetFloat("volume", _volume);
     }
