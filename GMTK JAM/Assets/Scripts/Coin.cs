@@ -11,12 +11,13 @@ public class Coin : MonoBehaviour
     [SerializeField] LeanTweenType TweenMoveType;
     [SerializeField] float CoinHeight;
     [SerializeField] GameObject CoinSound;
+    [SerializeField] BoolVariable LevelIsArranged;
     bool collected;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collected) return;
+        if (collected || LevelIsArranged.Value) return;
 
         CollectedCoinEvent.Event.Raise(value);
         collected = true;

@@ -43,4 +43,12 @@ public class EnemyMovement : MonoBehaviour
             Debug.Log(point.normal);
         }
     }
+
+    public void ConstrainEnemy(bool _state)
+    {
+        rb2d.isKinematic = _state;
+
+        rb2d.constraints = RigidbodyConstraints2D.None;
+        rb2d.constraints = _state ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.FreezeRotation;
+    }
 }

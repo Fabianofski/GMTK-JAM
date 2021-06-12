@@ -147,6 +147,7 @@ MonoBehaviour:
   TweenMoveType: 33
   CoinHeight: 0.2
   altBlock: {fileID: 21300000, guid: 51a2a53df518cc84ab79e9c12bc73208, type: 3}
+  LevelIsArranged: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
   HitSound: {fileID: 641695348994657998, guid: 8b3496ceaed0c3c42b9e3190f806c62a, type: 3}
   isOneTimeUse: 1
   SwitchEvent:

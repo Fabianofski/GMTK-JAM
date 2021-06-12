@@ -114,6 +114,8 @@ GameObject:
   - component: {fileID: 5471509705442333899}
   - component: {fileID: 5471509705442333901}
   - component: {fileID: 5471509705442333902}
+  - component: {fileID: -4115966798323463166}
+  - component: {fileID: 7457395351551509334}
   m_Layer: 0
   m_Name: ToborEnemy
   m_TagString: Untagged
@@ -197,3 +199,55 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &-4115966798323463166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5471509705442333898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25b543d02aa92d44a943ded6d73b5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDieEvent: {fileID: 11400000, guid: 559a27fb6f2c873439fc189d2533ec6b, type: 2}
+  LevelIsArranged: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
+--- !u!114 &7457395351551509334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5471509705442333898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6ab7cbc45164d19b20476265c251c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5471509705442333899}
+        m_TargetAssemblyTypeName: EnemyMovement, Assembly-CSharp
+        m_MethodName: ConstrainEnemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 070230e348f72844bbc69da436d56b8a, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}

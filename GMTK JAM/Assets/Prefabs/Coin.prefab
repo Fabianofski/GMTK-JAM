@@ -127,6 +127,7 @@ MonoBehaviour:
   TweenMoveType: 33
   CoinHeight: 0.6
   CoinSound: {fileID: 8611311178460714867, guid: 20021ab2eb4c3fc46b58e2459e4bfe26, type: 3}
+  LevelIsArranged: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
 --- !u!61 &2388982794874814979
 BoxCollider2D:
   m_ObjectHideFlags: 0

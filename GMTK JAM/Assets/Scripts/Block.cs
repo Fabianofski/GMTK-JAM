@@ -9,6 +9,7 @@ public class Block : MonoBehaviour
     [SerializeField] LeanTweenType TweenMoveType;
     [SerializeField] float CoinHeight;
     [SerializeField] Sprite altBlock;
+    [SerializeField] BoolVariable LevelIsArranged;
     Sprite ogBlock;
     Vector2 ogpos;
     SpriteRenderer spriteRenderer;
@@ -17,6 +18,7 @@ public class Block : MonoBehaviour
     [SerializeField] BoolUnityEvent SwitchEvent;
     [SerializeField] BoolUnityEvent NotSwitchEvent;
     bool collected;
+
 
     private void Awake()
     {
@@ -32,7 +34,7 @@ public class Block : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.GetContact(0).normal != Vector2.up) return;
-        if (collected && isOneTimeUse) return;
+        if ((collected && isOneTimeUse) || LevelIsArranged.Value) return;
 
         collected = true;
 

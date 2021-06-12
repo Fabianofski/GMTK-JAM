@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckIfPlayerIsGrounded()
     {
-        if (Physics2D.OverlapBox(feet.position, new Vector2(transform.localScale.x, radius) , groundLayer))
+        if (Physics2D.OverlapBox(feet.position, new Vector2(transform.localScale.x, radius) ,0, groundLayer))
             PlayerIsGrounded = true;
         else
             Invoke("DisableJump", CoyoteTimeConstant.Value);

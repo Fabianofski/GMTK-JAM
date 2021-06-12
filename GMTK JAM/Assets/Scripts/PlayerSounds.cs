@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerSounds : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerSounds : MonoBehaviour
     [SerializeField] GameObject[] FootStepSounds;
     [SerializeField] GameObject JumpSound;
     [SerializeField] Transform startPos;
+    [SerializeField] UnityEvent SpawnPlayer;
 
     private void Awake()
     {
@@ -33,5 +35,7 @@ public class PlayerSounds : MonoBehaviour
     {
         transform.parent.position = startPos.position;
         transform.parent.parent = startPos.parent;
+
+        SpawnPlayer.Invoke();
     }
 }

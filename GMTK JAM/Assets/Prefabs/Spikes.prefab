@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 749690507994490070}
   - component: {fileID: 749690507994490069}
   - component: {fileID: 749690507994490068}
-  - component: {fileID: 749690507994490064}
   - component: {fileID: 749690507994490071}
   m_Layer: 0
   m_Name: Spikes
@@ -98,27 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDieEvent: {fileID: 11400000, guid: 559a27fb6f2c873439fc189d2533ec6b, type: 2}
---- !u!50 &749690507994490064
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749690507994490075}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  LevelIsArranged: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
 --- !u!61 &749690507994490071
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -125,6 +125,33 @@ MonoBehaviour:
   - {fileID: 4641600712092226917, guid: f07ef943c1d80fa46b760614a7c240dc, type: 3}
   JumpSound: {fileID: 5584300450584544976, guid: 73091bb024e13324bb9ac9492369a31e, type: 3}
   startPos: {fileID: 0}
+  SpawnPlayer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 846524205644817744}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Live
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 99723da5c7c1cdf4c8be7b22d6aad446, type: 2}
+        m_TargetAssemblyTypeName: UnityAtoms.AtomVariable`5[[System.Boolean, mscorlib
+        m_MethodName: set_Value
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &846524205644817775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +313,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846524206309061924}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.3500004, y: -0.8100004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
