@@ -145,7 +145,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TweenMoveType: 33
   CoinHeight: 0.2
-  usedBlock: {fileID: 21300000, guid: 51a2a53df518cc84ab79e9c12bc73208, type: 3}
+  altBlock: {fileID: 21300000, guid: 51a2a53df518cc84ab79e9c12bc73208, type: 3}
+  HitSound: {fileID: 641695348994657998, guid: 8b3496ceaed0c3c42b9e3190f806c62a, type: 3}
+  isOneTimeUse: 1
+  SwitchEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4960718649905997670
 PrefabInstance:
   m_ObjectHideFlags: 0

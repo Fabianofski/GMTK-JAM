@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         if (PlayerIsGrounded && PlayerIsPressingJump)
         {
             Debug.Log("Jump");
+            GetComponentInChildren<PlayerSounds>().PlayJumpSound();
             rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
             rb2d.AddForce(Vector2.up * JumpForceConstant.Value);
         }
@@ -122,8 +123,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Animation()
     {
-        animator.SetBool("PlayerIsFalling", rb2d.velocity.y < 0);
-        animator.SetBool("PlayerIsJumping", rb2d.velocity.y > 0);
+        float _vel = rb2d.velocity.y;
+        _vel = Mathf.Round(_vel * 10) / 10;
+
+        animator.SetBool("PlayerIsFalling", _vel < 0);
+        animator.SetBool("PlayerIsJumping", _vel > 0);
         animator.SetBool("PlayerIsWalking", input.x != 0);
     }
 }

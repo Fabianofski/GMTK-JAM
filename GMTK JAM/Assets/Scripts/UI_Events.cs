@@ -66,4 +66,11 @@ public class UI_Events:MonoBehaviour
         _slider.value = PlayerPrefs.GetFloat(mixer.name, 1);
     }
 
+    public void PlaySound(GameObject _sound)
+    {
+        _sound = Instantiate(_sound);
+        _sound.GetComponent<AudioSource>().pitch = Random.Range(1f, 1.4f);
+        Destroy(_sound, 1f);
+    }
+
 }

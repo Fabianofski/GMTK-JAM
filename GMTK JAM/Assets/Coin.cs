@@ -10,6 +10,7 @@ public class Coin : MonoBehaviour
     [SerializeField] LeanTweenType TweenFadeType;
     [SerializeField] LeanTweenType TweenMoveType;
     [SerializeField] float CoinHeight;
+    [SerializeField] GameObject CoinSound;
     bool collected;
 
 
@@ -19,6 +20,10 @@ public class Coin : MonoBehaviour
 
         CollectedCoinEvent.Event.Raise(value);
         collected = true;
+
+        GameObject _sound = Instantiate(CoinSound);
+        _sound.GetComponent<AudioSource>().pitch = Random.Range(1f, 1.4f);
+        Destroy(_sound, 1f);
 
         LeanTween.moveY(gameObject, transform.position.y + CoinHeight, .5f).setEase(TweenMoveType);
         LeanTween.alpha(gameObject, 0f, .5f).setEase(TweenFadeType).setOnComplete(() => { Destroy(gameObject); });
