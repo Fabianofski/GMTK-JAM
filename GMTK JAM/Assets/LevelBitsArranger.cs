@@ -20,7 +20,7 @@ public class LevelBitsArranger : MonoBehaviour
 
     private void Awake()
     {
-        Invoke("Temp", 2f);
+        Invoke("Temp", 1f);
     }
 
     void Temp()
@@ -47,10 +47,18 @@ public class LevelBitsArranger : MonoBehaviour
             {
                 if (_defaultPos)
                     LeanTween.value(1f, 0.8f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
-                    { _child.localScale = new Vector2(value, value); });
+                    { _child.localScale = new Vector2(value, value); }).setOnComplete(() =>
+                    {
+                        LevelIsArranged.Value = true;
+                    }); 
                 else
                     LeanTween.value(0.8f, 1f, .5f).setEase(TweenScaleType).setOnUpdate((float value) =>
-                    { _child.localScale = new Vector2(value, value); }).setOnComplete(() => { LevelIsArranged.Value = false; });
+                    { _child.localScale = new Vector2(value, value); }).setOnComplete(() => 
+                    { 
+                        LevelIsArranged.Value = false;
+                        if (levelBit)
+                            ReleaseLevelBit();
+                    });
             }
         }
 

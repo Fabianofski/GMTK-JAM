@@ -149,7 +149,7 @@ MonoBehaviour:
   _replayEventBufferOnRegister: 1
   _eventReference:
     _usage: 0
-    _event: {fileID: 11400000, guid: 32e5b59aa4d07ac41a614603cc6261f1, type: 2}
+    _event: {fileID: 0}
     _eventInstancer: {fileID: 0}
     _collection: {fileID: 0}
     _list: {fileID: 0}
@@ -205,8 +205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalCoins: 0
   CoinsCollected: 0
-  ReachedGoalEvent: {fileID: 11400000, guid: 32e5b59aa4d07ac41a614603cc6261f1, type: 2}
+  ReachedGoalEvent: {fileID: 11400000, guid: 312e8feada05c474c9755848f0e66109, type: 2}
   GoalIsUnlocked: {fileID: 11400000, guid: fb18cf7a7a9b02d47b43b7492c030112, type: 2}
+  GoalIsUnlockedEvent: {fileID: 11400000, guid: 8accf11dc9a95934b931a7257b081516, type: 2}
 --- !u!114 &1227523605
 MonoBehaviour:
   m_ObjectHideFlags: 0

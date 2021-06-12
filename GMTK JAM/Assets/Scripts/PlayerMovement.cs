@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Components")]
     Rigidbody2D rb2d;
+    Animator animator;
+    SpriteRenderer spriteRenderer;
 
     [Header("Movement")]
     Vector2 input;
@@ -19,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] FloatConstant fallMultiplierConstant;
     [SerializeField] FloatConstant lowJumpMultiplierConstant;
     [SerializeField] FloatConstant CoyoteTimeConstant;
-    bool PlayerIsPressingJump;
+    [SerializeField] bool PlayerIsPressingJump;
 
     [Header("Ground Check")]
     [SerializeField] Transform feet;
@@ -33,6 +35,10 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        canMove.Reset();
     }
 
     public void OnFire(InputValue _value)
@@ -42,18 +48,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!canMove.Value)
+        if (!canMove.Value) 
+        {
+            input = Vector2.zero;
+            Move();
             return;
+        }
 
         Move();
         BetterJump();
         CheckIfPlayerIsGrounded();
+        Animation();
     }
 
     #region Movement
     public void OnMove(InputValue _value)
     {
         input = _value.Get<Vector2>();
+        spriteRenderer.flipX = input.x < 0;
     }
 
     private void Move()
@@ -107,4 +119,11 @@ public class PlayerMovement : MonoBehaviour
         return Vector2.up * Physics2D.gravity.y * (x - 1) * Time.fixedDeltaTime;
     }
     #endregion
+
+    void Animation()
+    {
+        animator.SetBool("PlayerIsFalling", rb2d.velocity.y < 0);
+        animator.SetBool("PlayerIsJumping", rb2d.velocity.y > 0);
+        animator.SetBool("PlayerIsWalking", input.x != 0);
+    }
 }

@@ -35,7 +35,7 @@
                     "id": "4498cbf8-2472-4d6b-bd3d-6657b7f6fa8e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 }
             ],
             "bindings": [

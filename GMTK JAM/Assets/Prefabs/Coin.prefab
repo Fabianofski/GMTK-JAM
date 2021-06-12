@@ -123,6 +123,9 @@ MonoBehaviour:
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
   value: 1
+  TweenFadeType: 2
+  TweenMoveType: 33
+  CoinHeight: 0.6
 --- !u!61 &2388982794874814979
 BoxCollider2D:
   m_ObjectHideFlags: 0
