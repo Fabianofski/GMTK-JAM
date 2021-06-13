@@ -18,6 +18,16 @@ public class MusicBox : MonoBehaviour
         PlayTrack();
     }
 
+    private void OnLevelWasLoaded(int level)
+    {
+        if (GameObject.FindGameObjectsWithTag("MusicBox").Length > 1)
+            Destroy(gameObject);
+
+        audioSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(gameObject);
+        PlayTrack();
+    }
+
     void PlayTrack()
     {
         string scene = SceneManager.GetActiveScene().name;
