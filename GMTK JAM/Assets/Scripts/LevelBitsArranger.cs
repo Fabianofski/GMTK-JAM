@@ -24,17 +24,6 @@ public class LevelBitsArranger : MonoBehaviour
     GameObject levelBit;
     Vector2 offset;
     Vector2 originalPos;
-
-    private void Awake()
-    {
-        Invoke("Temp", 1f);
-    }
-
-    void Temp()
-    {
-        SetUpLevelBits(true);
-    }
-
     public void SetUpLevelBits(bool _defaultPos)
     {
         if (GameEnded.Value) return;
@@ -108,6 +97,7 @@ public class LevelBitsArranger : MonoBehaviour
             Destroy(_sound, 1f);
 
             levelBit.GetComponent<SortingGroup>().sortingOrder += 1;
+            levelBit.GetComponent<LevelBitPreview>().isDragged = true;
             originalPos = levelBit.transform.position;
             offset = _mousePos - originalPos;
         }
@@ -120,6 +110,7 @@ public class LevelBitsArranger : MonoBehaviour
         Destroy(_sound, 1f);
 
         levelBit.GetComponent<SortingGroup>().sortingOrder -= 1;
+        levelBit.GetComponent<LevelBitPreview>().isDragged = false;
 
         levelBit.layer = 0;
         Collider2D _col = Physics2D.OverlapBox(levelBit.transform.position, levelBit.transform.localScale, 0f, levelBitLayer);

@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        CheckParent();
         Move();
         BetterJump();
         CheckIfPlayerIsGrounded();
@@ -125,17 +126,21 @@ public class PlayerMovement : MonoBehaviour
     void Animation()
     {
         float _vel = rb2d.velocity.y;
-        _vel = Mathf.Round(_vel * 10) / 10;
+        bool grounded = Physics2D.OverlapBox(feet.position, new Vector2(transform.localScale.x, radius), 0, groundLayer);
 
-        animator.SetBool("PlayerIsFalling", _vel < 0);
-        animator.SetBool("PlayerIsJumping", _vel > 0);
+        animator.SetBool("PlayerIsFalling", _vel < 0 && !grounded);
+        animator.SetBool("PlayerIsJumping", _vel > 0 && !grounded);
         animator.SetBool("PlayerIsWalking", input.x != 0);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void CheckParent()
     {
-        if (collision.gameObject.layer == LevelBitLayer)
+        Collider2D collision = Physics2D.OverlapCircle(transform.position, .5f, LevelBitLayer);
+
+        if (collision)
             transform.parent = collision.gameObject.transform;
+        else
+            transform.parent = null;
     }
 
     public void ConstrainPlayer(bool _state)

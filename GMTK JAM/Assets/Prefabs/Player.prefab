@@ -342,7 +342,7 @@ MonoBehaviour:
   CoyoteTimeConstant: {fileID: 11400000, guid: 11b3972ef161a674c8f13bd57d934601, type: 2}
   PlayerIsPressingJump: 0
   feet: {fileID: 846524206024782457}
-  radius: 0.1
+  radius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 128

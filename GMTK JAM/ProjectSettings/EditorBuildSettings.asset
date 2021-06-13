@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: aa9f5727936898042b8a9503042a5e3b
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Level 1 (Grass).unity
+    guid: 466972bf0759da847b9cc13a73ea5ce6
+  - enabled: 1
+    path: Assets/Scenes/Level 2 (Grass).unity
+    guid: 07ebdaa77c4badf4c89ca7a759e89dc7
+  - enabled: 1
+    path: Assets/Scenes/Level 3 (Grass).unity
+    guid: ae64b1c29ee5c7849af67c79f1043cc3
+  - enabled: 1
+    path: Assets/Scenes/Level 4 (Desert).unity
+    guid: 2721fa30d09cb0c42a005d8bccc63f61
   m_configObjects: {}

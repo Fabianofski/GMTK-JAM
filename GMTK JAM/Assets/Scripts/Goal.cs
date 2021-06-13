@@ -19,12 +19,18 @@ public class Goal : MonoBehaviour
         TotalCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
         GoalIsUnlocked.Reset();
         GameEnded.Reset();
+
+        CheckUnlockCondition();
     }
 
     public void CollectCoin(int _amount)
     {
         CoinsCollected += _amount;
+        CheckUnlockCondition();
+    }
 
+    private void CheckUnlockCondition()
+    {
         if (CoinsCollected >= TotalCoins)
         {
             GoalIsUnlocked.Value = true;
