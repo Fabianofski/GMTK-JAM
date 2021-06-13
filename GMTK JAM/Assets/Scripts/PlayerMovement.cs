@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityAtoms.BaseAtoms;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -45,6 +46,12 @@ public class PlayerMovement : MonoBehaviour
     public void OnFire(InputValue _value)
     {
         FireEvent.Event.Raise(_value.isPressed);
+    }
+
+    public void OnRestart(InputValue _value)
+    {
+        if (_value.isPressed)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void FixedUpdate()
