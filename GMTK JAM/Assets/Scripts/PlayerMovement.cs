@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckParent()
     {
-        Collider2D collision = Physics2D.OverlapCircle(transform.position, .5f, LevelBitLayer);
+        Collider2D collision = Physics2D.OverlapCircle(transform.position + new Vector3(0, .5f, 0), .5f, LevelBitLayer);
 
         if (collision)
             transform.parent = collision.gameObject.transform;

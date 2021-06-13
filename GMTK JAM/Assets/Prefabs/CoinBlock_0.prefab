@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4960718650688670155}
   - component: {fileID: 1346159011}
   - component: {fileID: -1156770144879260464}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CoinBlock_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

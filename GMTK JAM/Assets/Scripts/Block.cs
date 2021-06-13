@@ -24,6 +24,7 @@ public class Block : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         ogBlock = spriteRenderer.sprite;
+        UpdateOgPos();
     }
 
     public void UpdateOgPos()

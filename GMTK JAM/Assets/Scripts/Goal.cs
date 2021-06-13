@@ -12,6 +12,7 @@ public class Goal : MonoBehaviour
     [SerializeField] BoolEvent ReachedGoalEvent;
     [SerializeField] BoolVariable GoalIsUnlocked;
     [SerializeField] BoolVariable GameEnded;
+    [SerializeField] BoolVariable LevelIsArranged;
     [SerializeField] BoolEvent GoalIsUnlockedEvent;
 
     private void Awake()
@@ -40,7 +41,7 @@ public class Goal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && GoalIsUnlocked.Value)
+        if (collision.CompareTag("Player") && GoalIsUnlocked.Value && !LevelIsArranged.Value)
         {
             collision.transform.position = transform.position;
             Debug.Log("Reached Goal");

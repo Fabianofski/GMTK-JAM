@@ -336,6 +336,7 @@ MonoBehaviour:
   ReachedGoalEvent: {fileID: 11400000, guid: 312e8feada05c474c9755848f0e66109, type: 2}
   GoalIsUnlocked: {fileID: 11400000, guid: fb18cf7a7a9b02d47b43b7492c030112, type: 2}
   GameEnded: {fileID: 11400000, guid: b7ff9fd304f1dd94090fcc68acb541c8, type: 2}
+  LevelIsArranged: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
   GoalIsUnlockedEvent: {fileID: 11400000, guid: 8accf11dc9a95934b931a7257b081516, type: 2}
 --- !u!114 &1227523605
 MonoBehaviour:
