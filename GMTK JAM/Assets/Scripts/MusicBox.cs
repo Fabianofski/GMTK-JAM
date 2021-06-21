@@ -13,6 +13,9 @@ public class MusicBox : MonoBehaviour
 
     private void Awake()
     {
+        if (GameObject.FindGameObjectsWithTag("MusicBox").Length > 1)
+            Destroy(gameObject);
+
         audioSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(gameObject);
         PlayTrack();
@@ -20,11 +23,7 @@ public class MusicBox : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        if (GameObject.FindGameObjectsWithTag("MusicBox").Length > 1)
-            Destroy(gameObject);
-
         audioSource = GetComponent<AudioSource>();
-        DontDestroyOnLoad(gameObject);
         PlayTrack();
     }
 

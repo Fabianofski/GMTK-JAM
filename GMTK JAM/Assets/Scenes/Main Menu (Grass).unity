@@ -789,7 +789,6 @@ GameObject:
   m_Component:
   - component: {fileID: 517551111}
   - component: {fileID: 517551114}
-  - component: {fileID: 517551113}
   - component: {fileID: 517551112}
   m_Layer: 5
   m_Name: Slider
@@ -881,58 +880,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &517551113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517551110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _developerDescription: 
-  _unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1699655895}
-        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
-        m_MethodName: set_mixer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 24100000, guid: 9a5b1147c0883564fb0f408305b0093c, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Audio.AudioMixer, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1699655895}
-        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
-        m_MethodName: UpdateSlider
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 517551114}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _actionResponses: []
-  _conditions: []
-  _operator: 0
-  _replayEventBufferOnRegister: 1
-  _eventReference:
-    _usage: 0
-    _event: {fileID: 11400000, guid: 7785d6ba07b6e7e4a9b2b1ee38f53226, type: 2}
-    _eventInstancer: {fileID: 0}
-    _collection: {fileID: 0}
-    _list: {fileID: 0}
-    _collectionInstancer: {fileID: 0}
-    _listInstancer: {fileID: 0}
 --- !u!114 &517551114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2678,6 +2625,147 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1501893756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1501893757}
+  - component: {fileID: 1501893759}
+  - component: {fileID: 1501893758}
+  m_Layer: 5
+  m_Name: UI_Updater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1501893757
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501893756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1699655894}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1501893758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501893756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1699655895}
+        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
+        m_MethodName: set_mixer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 24100000, guid: 71019aa9703cd684e9dee59de8d8c6d8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Audio.AudioMixer, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1699655895}
+        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
+        m_MethodName: UpdateSlider
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1687880997}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 7785d6ba07b6e7e4a9b2b1ee38f53226, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}
+--- !u!114 &1501893759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501893756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1699655895}
+        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
+        m_MethodName: set_mixer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 24100000, guid: 9a5b1147c0883564fb0f408305b0093c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Audio.AudioMixer, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1699655895}
+        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
+        m_MethodName: UpdateSlider
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 517551114}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 7785d6ba07b6e7e4a9b2b1ee38f53226, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}
 --- !u!1 &1553268392
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,7 +3262,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1687880994}
   - component: {fileID: 1687880997}
-  - component: {fileID: 1687880996}
   - component: {fileID: 1687880995}
   m_Layer: 5
   m_Name: Slider
@@ -3266,58 +3353,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &1687880996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687880993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _developerDescription: 
-  _unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1699655895}
-        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
-        m_MethodName: set_mixer
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 24100000, guid: 9a5b1147c0883564fb0f408305b0093c, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Audio.AudioMixer, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1699655895}
-        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
-        m_MethodName: UpdateSlider
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1687880997}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _actionResponses: []
-  _conditions: []
-  _operator: 0
-  _replayEventBufferOnRegister: 1
-  _eventReference:
-    _usage: 0
-    _event: {fileID: 11400000, guid: 7785d6ba07b6e7e4a9b2b1ee38f53226, type: 2}
-    _eventInstancer: {fileID: 0}
-    _collection: {fileID: 0}
-    _list: {fileID: 0}
-    _collectionInstancer: {fileID: 0}
-    _listInstancer: {fileID: 0}
 --- !u!114 &1687880997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,6 +3459,7 @@ RectTransform:
   - {fileID: 1057724281}
   - {fileID: 1215172760}
   - {fileID: 1963617713}
+  - {fileID: 1501893757}
   m_Father: {fileID: 2125568159}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -12,7 +12,7 @@ public class UI_Events:MonoBehaviour
     [SerializeField] VoidEvent UpdateUIEvent;
     [SerializeField] GameObject PopSound;
 
-    private void Awake()
+    private void Start()
     {
         if(UpdateUIEvent)
             UpdateUIEvent.Raise();
@@ -66,7 +66,11 @@ public class UI_Events:MonoBehaviour
 
     public void UpdateSlider(Slider _slider)
     {
-        _slider.value = PlayerPrefs.GetFloat(mixer.name, 1);
+        float _volume = PlayerPrefs.GetFloat(mixer.name, 1);
+        _slider.value = _volume;
+
+        _volume = Mathf.Log(_volume) * 20;
+        mixer.SetFloat("volume", _volume);
     }
 
     public void PlaySound(GameObject _sound)
