@@ -337,6 +337,7 @@ MonoBehaviour:
   speedConstant: {fileID: 11400000, guid: ca97d5c66530a40459ae61e53583a74e, type: 2}
   canMove: {fileID: 11400000, guid: 99723da5c7c1cdf4c8be7b22d6aad446, type: 2}
   JumpForceConstant: {fileID: 11400000, guid: d7ae2d2f3d7bca648b04b5de85f984aa, type: 2}
+  JumpAmountConstant: {fileID: 11400000, guid: b18399bc269aecd4ab4d047f44793b14, type: 2}
   fallMultiplierConstant: {fileID: 11400000, guid: a530d94ee0333c2459e0447611d82ab3, type: 2}
   lowJumpMultiplierConstant: {fileID: 11400000, guid: f7ec2358cbdd61341b1c29ddd1e2b279, type: 2}
   CoyoteTimeConstant: {fileID: 11400000, guid: 11b3972ef161a674c8f13bd57d934601, type: 2}
@@ -354,6 +355,18 @@ MonoBehaviour:
     _event: {fileID: 11400000, guid: 9547410843111964aa0707510d90904e, type: 2}
     _eventInstancer: {fileID: 0}
     _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  SplitEvent:
+    _usage: 0
+    _event: {fileID: 11400000, guid: f3dbc384cd74c4c4b97af61a444c4448, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  LevelIsArranged:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
     _variableInstancer: {fileID: 0}
 --- !u!114 &846524206309061922
 MonoBehaviour:

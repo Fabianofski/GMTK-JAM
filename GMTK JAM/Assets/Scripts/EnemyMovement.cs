@@ -40,7 +40,6 @@ public class EnemyMovement : MonoBehaviour
                 spriteRenderer.flipX = movedir == 1;
                 return;
             }
-            Debug.Log(point.normal);
         }
     }
 

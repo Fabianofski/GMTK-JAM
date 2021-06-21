@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5950638865692748568}
   - component: {fileID: 5950638865692748570}
   - component: {fileID: 5950638865692748571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SwitchDoor_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5950638866678955260}
   - component: {fileID: 5950638866678955263}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SwitchDoor_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5950638866695183492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}

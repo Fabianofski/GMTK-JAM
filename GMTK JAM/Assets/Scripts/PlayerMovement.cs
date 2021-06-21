@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump")]
     [SerializeField] IntConstant JumpForceConstant;
+    [SerializeField] IntConstant JumpAmountConstant;
+    int jumpsLeft;
     [SerializeField] FloatConstant fallMultiplierConstant;
     [SerializeField] FloatConstant lowJumpMultiplierConstant;
     [SerializeField] FloatConstant CoyoteTimeConstant;
@@ -32,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
     bool PlayerIsGrounded;
 
     [SerializeField] BoolEventReference FireEvent;
+    [SerializeField] BoolEventReference SplitEvent;
+    [SerializeField] BoolReference LevelIsArranged;
+    bool canSplit = true;
 
 
     private void Awake()
@@ -40,7 +45,22 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
+        jumpsLeft = JumpAmountConstant.Value;
         canMove.Reset();
+    }
+
+    public void OnSplit()
+    {
+        if (!canSplit) return;
+        SplitEvent.Event.Raise(!LevelIsArranged.Value);
+
+        canSplit = false;
+        Invoke("ResetSplit", 0.5f);
+    }
+
+    void ResetSplit()
+    {
+        canSplit = true;
     }
 
     public void OnFire(InputValue _value)
@@ -95,9 +115,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void TryToPerformJump()
     {
-        if (PlayerIsGrounded && PlayerIsPressingJump)
+        if (jumpsLeft > 0 && PlayerIsPressingJump)
         {
             Debug.Log("Jump");
+            jumpsLeft--;
             GetComponentInChildren<PlayerSounds>().PlayJumpSound();
             rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
             rb2d.AddForce(Vector2.up * JumpForceConstant.Value);
@@ -106,15 +127,19 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckIfPlayerIsGrounded()
     {
-        if (Physics2D.OverlapBox(feet.position, new Vector2(transform.localScale.x, radius) ,0, groundLayer))
+        if (Physics2D.OverlapBox(feet.position, new Vector2(.5f, radius) ,0, groundLayer))
+        {
+            if (PlayerIsPressingJump) return;
             PlayerIsGrounded = true;
+            jumpsLeft = JumpAmountConstant.Value;
+        }
         else
             Invoke("DisableJump", CoyoteTimeConstant.Value);
     }
 
     void DisableJump()
     {
-        PlayerIsGrounded = Physics2D.OverlapCircle(feet.position, radius, groundLayer);
+        PlayerIsGrounded = Physics2D.OverlapBox(feet.position, new Vector2(.5f, radius), 0, groundLayer);
     }
 
     void BetterJump()
@@ -156,6 +181,12 @@ public class PlayerMovement : MonoBehaviour
 
         rb2d.constraints = RigidbodyConstraints2D.None;
         rb2d.constraints = _state ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(feet.position, new Vector2(.5f, radius));
     }
 
 }

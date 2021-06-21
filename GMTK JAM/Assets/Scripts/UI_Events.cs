@@ -14,7 +14,8 @@ public class UI_Events:MonoBehaviour
 
     private void Awake()
     {
-        UpdateUIEvent.Raise();
+        if(UpdateUIEvent)
+            UpdateUIEvent.Raise();
     }
 
     public void ToggleUIElement(GameObject _UIElement)
