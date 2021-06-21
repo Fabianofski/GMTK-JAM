@@ -33,12 +33,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask LevelBitLayer;
     bool PlayerIsGrounded;
 
-    [SerializeField] BoolEventReference FireEvent;
-    [SerializeField] BoolEventReference SplitEvent;
-    [SerializeField] BoolReference LevelIsArranged;
-    bool canSplit = true;
-
-
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -47,31 +41,6 @@ public class PlayerMovement : MonoBehaviour
 
         jumpsLeft = JumpAmountConstant.Value;
         canMove.Reset();
-    }
-
-    public void OnSplit()
-    {
-        if (!canSplit) return;
-        SplitEvent.Event.Raise(!LevelIsArranged.Value);
-
-        canSplit = false;
-        Invoke("ResetSplit", 0.5f);
-    }
-
-    void ResetSplit()
-    {
-        canSplit = true;
-    }
-
-    public void OnFire(InputValue _value)
-    {
-        FireEvent.Event.Raise(_value.isPressed);
-    }
-
-    public void OnRestart(InputValue _value)
-    {
-        if (_value.isPressed)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void FixedUpdate()

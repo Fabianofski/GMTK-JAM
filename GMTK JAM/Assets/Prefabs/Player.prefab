@@ -293,6 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 846524206309061923}
+  - component: {fileID: -4996606657000962911}
   - component: {fileID: 846524206309061951}
   - component: {fileID: 846524206309061922}
   - component: {fileID: 846524206309061920}
@@ -322,6 +323,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4996606657000962911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846524206309061924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94692ddc105c7d54184212d1bbd511b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangedToGamepadEvent:
+    _usage: 0
+    _event: {fileID: 11400000, guid: ff8b8c3e569e023418073f7f704ce5e4, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  IsUsingGamepad:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 365b5742372d38141a2e92f4e2d632a8, type: 2}
+    _variableInstancer: {fileID: 0}
+  FireEvent:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 9547410843111964aa0707510d90904e, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  SplitEvent:
+    _usage: 0
+    _event: {fileID: 11400000, guid: f3dbc384cd74c4c4b97af61a444c4448, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  LevelIsArranged:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
+    _variableInstancer: {fileID: 0}
 --- !u!114 &846524206309061951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,24 +393,6 @@ MonoBehaviour:
   LevelBitLayer:
     serializedVersion: 2
     m_Bits: 64
-  FireEvent:
-    _usage: 0
-    _event: {fileID: 11400000, guid: 9547410843111964aa0707510d90904e, type: 2}
-    _eventInstancer: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  SplitEvent:
-    _usage: 0
-    _event: {fileID: 11400000, guid: f3dbc384cd74c4c4b97af61a444c4448, type: 2}
-    _eventInstancer: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
-  LevelIsArranged:
-    _usage: 2
-    _value: 0
-    _constant: {fileID: 0}
-    _variable: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
-    _variableInstancer: {fileID: 0}
 --- !u!114 &846524206309061922
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityAtoms.BaseAtoms;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class UI_Events:MonoBehaviour
 {
@@ -12,10 +14,21 @@ public class UI_Events:MonoBehaviour
     [SerializeField] VoidEvent UpdateUIEvent;
     [SerializeField] GameObject PopSound;
 
+    [Header("CheckMouseInput")]
+    Vector2 oldMousePos;
+    bool mouseIsMoving;
+    GameObject selectedElement;
+    [SerializeField] float threshold;
+    [SerializeField] bool checkMouseInput = false;
+    bool cooldown;
+    EventSystem eventSystem; 
+
     private void Start()
     {
-        if(UpdateUIEvent)
+        if (UpdateUIEvent)
             UpdateUIEvent.Raise();
+        eventSystem = EventSystem.current;
+        selectedElement = eventSystem.currentSelectedGameObject;
     }
 
     public void ToggleUIElement(GameObject _UIElement)
@@ -79,5 +92,43 @@ public class UI_Events:MonoBehaviour
         _sound.GetComponent<AudioSource>().pitch = Random.Range(1f, 1.4f);
         Destroy(_sound, 1f);
     }
+
+    private void Update()
+    {
+        if(checkMouseInput)
+            OnMouseMove();
+    }
+
+    public void OnMouseMove()
+    {
+        float _MouseMag = (Mouse.current.position.ReadValue() - oldMousePos).magnitude;
+        mouseIsMoving = Mathf.Abs(_MouseMag) > threshold;
+        GameObject _currentGameObject = eventSystem.currentSelectedGameObject;
+
+        if(mouseIsMoving && _currentGameObject != null)
+        {
+            selectedElement = _currentGameObject;
+            eventSystem.SetSelectedGameObject(null);
+            if(!cooldown)
+                Cooldown();
+        }
+        else if (_currentGameObject != null)
+            selectedElement = _currentGameObject;
+        else if (!mouseIsMoving && !cooldown)
+        {
+            eventSystem.SetSelectedGameObject(selectedElement);
+            Cooldown();
+        }
+
+        oldMousePos = Mouse.current.position.ReadValue();
+    }
+
+    void Cooldown()
+    {
+        cooldown = true;
+        Invoke("ResetCooldown", .5f);
+    }
+
+    void ResetCooldown() => cooldown = false;
 
 }
