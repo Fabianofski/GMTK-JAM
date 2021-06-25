@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7658431145476878484}
   - component: {fileID: 228249907082121246}
   - component: {fileID: 7814557000999421050}
+  - component: {fileID: 3067105690489772905}
   m_Layer: 0
   m_Name: LevelBits
   m_TagString: Untagged
@@ -51,6 +52,8 @@ MonoBehaviour:
   GameEnded: {fileID: 11400000, guid: b7ff9fd304f1dd94090fcc68acb541c8, type: 2}
   ClickSound: {fileID: 330354347049902164, guid: ce523fe48ec914844acc702eb5c6b9ef, type: 3}
   ReleaseSound: {fileID: 641695348994657998, guid: 1dc7fb48780111944bcc88e2daed41f1, type: 3}
+  SplitApartSound: {fileID: 8611311178460714867, guid: eac89e10bfb48ea4a8a53b222c408bd8, type: 3}
+  JoinTogetherSound: {fileID: 8611311178460714867, guid: b26b04ed011be3d4e9f0c796a0fb5125, type: 3}
   levelBitLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -73,7 +76,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7658431145476878484}
         m_TargetAssemblyTypeName: LevelBitsArranger, Assembly-CSharp
         m_MethodName: Click
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -129,4 +132,23 @@ MonoBehaviour:
     _event: {fileID: 11400000, guid: f3dbc384cd74c4c4b97af61a444c4448, type: 2}
     _eventInstancer: {fileID: 0}
     _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &3067105690489772905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762538137496753325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c99c977fee11cd47954dcfebbd750b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputAsset: {fileID: -944628639613478452, guid: 172b8003c7f48c3439abe63d27ed002d, type: 3}
+  LevelIsArranged:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
     _variableInstancer: {fileID: 0}

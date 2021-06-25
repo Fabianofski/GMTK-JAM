@@ -18,7 +18,8 @@ public class PlayerInputController : MonoBehaviour
     public void OnSplit()
     {
         if (!canSplit) return;
-        SplitEvent.Event.Raise(!LevelIsArranged.Value);
+        if(SplitEvent.Event)
+            SplitEvent.Event.Raise(!LevelIsArranged.Value);
 
         canSplit = false;
         Invoke("ResetSplit", 0.5f);
@@ -31,7 +32,8 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnFire(InputValue _value)
     {
-        FireEvent.Event.Raise(_value.isPressed);
+        if(FireEvent.Event)
+            FireEvent.Event.Raise(_value.isPressed);
     }
 
     public void OnRestart(InputValue _value)

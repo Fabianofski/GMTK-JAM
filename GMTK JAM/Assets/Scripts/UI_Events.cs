@@ -17,18 +17,22 @@ public class UI_Events:MonoBehaviour
     [Header("CheckMouseInput")]
     Vector2 oldMousePos;
     bool mouseIsMoving;
-    GameObject selectedElement;
+    [SerializeField] GameObject selectedElement;
     [SerializeField] float threshold;
     [SerializeField] bool checkMouseInput = false;
-    bool cooldown;
-    EventSystem eventSystem; 
+    EventSystem eventSystem;
+    [SerializeField] InputActionAsset inputAsset;
 
     private void Start()
     {
         if (UpdateUIEvent)
             UpdateUIEvent.Raise();
+
+        if (!checkMouseInput) return;
         eventSystem = EventSystem.current;
         selectedElement = eventSystem.currentSelectedGameObject;
+        inputAsset.Enable();
+        inputAsset.FindActionMap("UI").FindAction("Navigate").performed += _ => OnKeyboardMove();
     }
 
     public void ToggleUIElement(GameObject _UIElement)
@@ -103,32 +107,21 @@ public class UI_Events:MonoBehaviour
     {
         float _MouseMag = (Mouse.current.position.ReadValue() - oldMousePos).magnitude;
         mouseIsMoving = Mathf.Abs(_MouseMag) > threshold;
-        GameObject _currentGameObject = eventSystem.currentSelectedGameObject;
+        GameObject _selectedElement = eventSystem.currentSelectedGameObject;
 
-        if(mouseIsMoving && _currentGameObject != null)
+        if(mouseIsMoving && _selectedElement)
         {
-            selectedElement = _currentGameObject;
+            selectedElement = _selectedElement;
             eventSystem.SetSelectedGameObject(null);
-            if(!cooldown)
-                Cooldown();
-        }
-        else if (_currentGameObject != null)
-            selectedElement = _currentGameObject;
-        else if (!mouseIsMoving && !cooldown)
-        {
-            eventSystem.SetSelectedGameObject(selectedElement);
-            Cooldown();
         }
 
         oldMousePos = Mouse.current.position.ReadValue();
     }
 
-    void Cooldown()
+    private void OnKeyboardMove()
     {
-        cooldown = true;
-        Invoke("ResetCooldown", .5f);
+        GameObject _selectedElement = eventSystem.currentSelectedGameObject;
+        if(!_selectedElement)
+            eventSystem.SetSelectedGameObject(selectedElement);
     }
-
-    void ResetCooldown() => cooldown = false;
-
 }

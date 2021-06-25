@@ -86,7 +86,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (jumpsLeft > 0 && PlayerIsPressingJump)
         {
-            Debug.Log("Jump");
             jumpsLeft--;
             GetComponentInChildren<PlayerSounds>().PlayJumpSound();
             rb2d.velocity = new Vector2(rb2d.velocity.x, 0);

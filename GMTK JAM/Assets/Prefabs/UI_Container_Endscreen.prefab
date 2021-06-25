@@ -884,6 +884,10 @@ PrefabInstance:
       propertyPath: threshold
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7043791351639193184, guid: bc630dca931439d4eac927197851d741, type: 3}
+      propertyPath: inputAsset
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 172b8003c7f48c3439abe63d27ed002d, type: 3}
     - target: {fileID: 7043791351639193185, guid: bc630dca931439d4eac927197851d741, type: 3}
       propertyPath: m_RootOrder
       value: 1

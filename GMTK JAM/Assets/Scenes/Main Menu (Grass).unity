@@ -3577,8 +3577,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdateUIEvent: {fileID: 11400000, guid: 7785d6ba07b6e7e4a9b2b1ee38f53226, type: 2}
   PopSound: {fileID: 3909741800830872085, guid: ee3da37d969b31c4ca4951e7c90df1b9, type: 3}
+  selectedElement: {fileID: 0}
   threshold: 0
   checkMouseInput: 0
+  inputAsset: {fileID: 0}
 --- !u!1 &1816343331
 GameObject:
   m_ObjectHideFlags: 0

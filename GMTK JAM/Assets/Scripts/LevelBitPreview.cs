@@ -3,27 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityAtoms.BaseAtoms;
+using UnityEngine.InputSystem;
 
 public class LevelBitPreview : MonoBehaviour
 {
 
-    GameObject preview;
+    [Header("Light Preview")]
+    [SerializeField] GameObject preview;
+    [SerializeField] GameObject selectPreview;
+
+    [Header("Raycast")]
     [SerializeField] BoolVariable LevelIsArranged;
     [SerializeField] LayerMask layer;
     public bool isDragged;
 
-    private void Awake()
-    {
-        preview = transform.GetChild(1).gameObject;
-    }
-
     private void Update()
     {
-        if (!LevelIsArranged.Value) return;
+        if (!LevelIsArranged.Value) 
+        {
+            preview.SetActive(false);
+            selectPreview.SetActive(false);
+            return; 
+        }
 
-        Collider2D[] _col = Physics2D.OverlapBoxAll(transform.position, transform.localScale, 0f, layer);
+        Vector2 _mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        GameObject _levelBit = GetLevelBit(_mousePos);
 
-        preview.SetActive(_col.Length > 1 || isDragged);
+        preview.SetActive(_levelBit == gameObject && !isDragged);
+        selectPreview.SetActive(isDragged);
     }
+    GameObject GetLevelBit(Vector2 _mousePos)
+    {
+        RaycastHit2D _hit2d = Physics2D.Raycast(_mousePos, Vector2.zero, 0f, layer);
 
+        if (_hit2d)
+            return _hit2d.collider.gameObject;
+        else
+            return null;
+    }
 }

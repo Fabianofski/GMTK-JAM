@@ -157,18 +157,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1270113358887067483}
-        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
-        m_MethodName: PlaySound
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8611311178460714867, guid: b26b04ed011be3d4e9f0c796a0fb5125, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1270113358211227743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +321,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdateUIEvent: {fileID: 0}
   PopSound: {fileID: 3909741800830872085, guid: ee3da37d969b31c4ca4951e7c90df1b9, type: 3}
+  threshold: 0
+  checkMouseInput: 0
+  inputAsset: {fileID: 0}
 --- !u!1 &1270113359310473815
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,18 +476,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1270113358887067483}
-        m_TargetAssemblyTypeName: UI_Events, Assembly-CSharp
-        m_MethodName: PlaySound
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8611311178460714867, guid: eac89e10bfb48ea4a8a53b222c408bd8, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
