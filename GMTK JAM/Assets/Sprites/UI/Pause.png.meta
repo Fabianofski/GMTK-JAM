@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: c2f3d5bbd966f354f9954dcaab92b913
+guid: 82012b5b13a440843ae6b493189f7081
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1930919950325008402
-    second: VolSliderFill_0
+      213: -8324248143263971872
+    second: PauseButtons_0
   - first:
-      213: 3373791433332970824
-    second: VolSliderFill_1
+      213: 5388821162292924090
+    second: PauseButtons_1
   - first:
-      213: -7137756100363495695
-    second: VolSliderFill_2
+      213: 5860499561393072227
+    second: PauseButtons_2
   - first:
-      213: -1879663541107374022
-    second: VolSliderFill_3
+      213: -7299787479541288329
+    second: PauseButtons_3
+  - first:
+      213: 6356808772755973910
+    second: PauseButtons_4
+  - first:
+      213: 5755181880830069410
+    second: PauseButtons_5
+  - first:
+      213: -5310323608510352450
+    second: PauseButtons_6
+  - first:
+      213: 700244227597145835
+    second: PauseButtons_7
+  - first:
+      213: -6751260847611772353
+    second: PauseButtons_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,8 +73,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
-  spriteBorder: {x: 2, y: 2, z: 2, w: 2}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -127,55 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VolSliderFill_0
+      name: PauseButtons_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 9
-        width: 56
-        height: 6
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 2, y: 1, z: 2, w: 1}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21846d0e6710cca10800000000000000
-      internalID: 1930919950325008402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VolSliderFill_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1
-        width: 56
-        height: 6
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 845511afe6d12de20800000000000000
-      internalID: 3373791433332970824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VolSliderFill_2
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 8
-        height: 8
+        y: 49
+        width: 32
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,29 +156,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f6d478e4a891fc90800000000000000
-      internalID: -7137756100363495695
+      spriteID: 0e5cb8eda645a7c80800000000000000
+      internalID: -8324248143263971872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VolSliderFill_3
+      name: PauseButtons_1
       rect:
         serializedVersion: 2
-        x: 56
+        x: 32
+        y: 49
+        width: 32
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abec390cb40f8ca40800000000000000
+      internalID: 5388821162292924090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtons_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368aa230d4da45150800000000000000
+      internalID: 5860499561393072227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtons_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 40
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772f81a96f1f1ba90800000000000000
+      internalID: -7299787479541288329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtons_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617e43526ebe73850800000000000000
+      internalID: 6356808772755973910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtons_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa04a8ad638edf40800000000000000
+      internalID: 5755181880830069410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtons_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3be5830d0fd46b0800000000000000
+      internalID: -5310323608510352450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtons_7
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 8
-        width: 8
-        height: 8
+        width: 21
+        height: 5
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a38ca0fd7f71ae5e0800000000000000
-      internalID: -1879663541107374022
+      spriteID: be612f93a64c7b900800000000000000
+      internalID: 700244227597145835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButtons_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 59
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3209106704be42a0800000000000000
+      internalID: -6751260847611772353
       vertices: []
       indices: 
       edges: []

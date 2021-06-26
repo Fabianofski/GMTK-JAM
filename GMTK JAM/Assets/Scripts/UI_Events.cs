@@ -23,6 +23,7 @@ public class UI_Events:MonoBehaviour
     EventSystem eventSystem;
     [SerializeField] InputActionAsset inputAsset;
     [SerializeField] BoolVariable PlayerCanMove;
+    [SerializeField] BoolVariable LevelIsArranged;
 
     private void Start()
     {
@@ -93,6 +94,11 @@ public class UI_Events:MonoBehaviour
         mixer.SetFloat("volume", _volume);
     }
 
+    public void UpdateFullscreenToggle(Toggle _toggle)
+    {
+        _toggle.isOn = Screen.fullScreen;
+    }
+
     public void PlaySound(GameObject _sound)
     {
         _sound = Instantiate(_sound);
@@ -130,7 +136,7 @@ public class UI_Events:MonoBehaviour
 
     public void PauseGame(bool _isPaused)
     {
-        PlayerCanMove.Value = !_isPaused;
+        PlayerCanMove.Value = !_isPaused && !LevelIsArranged.Value;
         Cursor.visible = _isPaused;
         Time.timeScale = _isPaused ? 0 : 1;
     }

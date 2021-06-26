@@ -19,7 +19,8 @@ public class PlayerInputController : MonoBehaviour
     bool canSplit = true;
     public void OnSplit()
     {
-        if (!canSplit || GameEnded.Value) return;
+        if (!canSplit || GameEnded.Value || GamePaused.Value) return;
+
         if(SplitEvent.Event)
             SplitEvent.Event.Raise(!LevelIsArranged.Value);
 
@@ -34,12 +35,15 @@ public class PlayerInputController : MonoBehaviour
 
     public void OnPause()
     {
-        GamePaused.Value = !GamePaused.Value;
+        if(!GameEnded.Value)
+            GamePaused.Value = !GamePaused.Value;
     }
 
     public void OnFire(InputValue _value)
     {
-        if(FireEvent.Event)
+        if (GameEnded.Value || GamePaused.Value) return;
+
+        if (FireEvent.Event)
             FireEvent.Event.Raise(_value.isPressed);
     }
 
