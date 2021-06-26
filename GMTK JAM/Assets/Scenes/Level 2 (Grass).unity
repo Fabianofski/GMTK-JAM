@@ -4091,6 +4091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBit (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7759334522056918771, guid: 021b03bce949c7148a8fc3337cddb3ce, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8299407146635849819, guid: 021b03bce949c7148a8fc3337cddb3ce, type: 3}
       propertyPath: m_Size.x
       value: 29

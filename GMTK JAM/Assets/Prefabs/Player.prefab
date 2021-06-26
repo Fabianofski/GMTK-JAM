@@ -335,12 +335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94692ddc105c7d54184212d1bbd511b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangedToGamepadEvent:
-    _usage: 0
-    _event: {fileID: 11400000, guid: ff8b8c3e569e023418073f7f704ce5e4, type: 2}
-    _eventInstancer: {fileID: 0}
-    _variable: {fileID: 0}
-    _variableInstancer: {fileID: 0}
   IsUsingGamepad:
     _usage: 2
     _value: 0
@@ -364,6 +358,18 @@ MonoBehaviour:
     _value: 0
     _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
+    _variableInstancer: {fileID: 0}
+  GameEnded:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: b7ff9fd304f1dd94090fcc68acb541c8, type: 2}
+    _variableInstancer: {fileID: 0}
+  GamePaused:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 4fe69dc66a4de314089c6731191aa4d2, type: 2}
     _variableInstancer: {fileID: 0}
 --- !u!114 &846524206309061951
 MonoBehaviour:

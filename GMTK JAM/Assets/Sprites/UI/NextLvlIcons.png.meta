@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 4494333456678796466
     second: NextLvlIcons_5
+  - first:
+      213: -6237971043089029341
+    second: NextLvlIcons_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 14
+        y: 30
         width: 33
         height: 7
       alignment: 0
@@ -158,7 +161,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 46
-        y: 14
+        y: 30
         width: 33
         height: 7
       alignment: 0
@@ -179,7 +182,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 7
+        y: 23
         width: 45
         height: 7
       alignment: 0
@@ -200,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 46
-        y: 7
+        y: 23
         width: 45
         height: 7
       alignment: 0
@@ -221,7 +224,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 16
         width: 45
         height: 7
       alignment: 0
@@ -242,7 +245,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 46
-        y: 0
+        y: 16
         width: 45
         height: 7
       alignment: 0
@@ -254,6 +257,27 @@ TextureImporter:
       bones: []
       spriteID: 2bc3e7387741f5e30800000000000000
       internalID: 4494333456678796466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NextLvlIcons_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3276181f2664e69a0800000000000000
+      internalID: -6237971043089029341
       vertices: []
       indices: 
       edges: []

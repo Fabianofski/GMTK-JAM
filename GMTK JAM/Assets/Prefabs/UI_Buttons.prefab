@@ -229,6 +229,8 @@ GameObject:
   - component: {fileID: 1270113358887067481}
   - component: {fileID: 1270113358887067482}
   - component: {fileID: 1270113358887067483}
+  - component: {fileID: 5475422871822376917}
+  - component: {fileID: 6119453247025043171}
   m_Layer: 5
   m_Name: UI_Buttons
   m_TagString: Untagged
@@ -321,9 +323,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdateUIEvent: {fileID: 0}
   PopSound: {fileID: 3909741800830872085, guid: ee3da37d969b31c4ca4951e7c90df1b9, type: 3}
+  selectedElement: {fileID: 0}
   threshold: 0
   checkMouseInput: 0
   inputAsset: {fileID: 0}
+  PlayerCanMove: {fileID: 0}
+--- !u!114 &5475422871822376917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270113358887067480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b826ce94929ef234787774ee202805d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputImages: []
+  inputSpriteRenderers: []
+  inputButtons:
+  - button: {fileID: 1270113358211227740}
+    KeyboardSprite: {fileID: -2636446900402747224, guid: 2356b45dacc3bb64fac0f7d6b4a05257, type: 3}
+    KeyboardSpritePressed: {fileID: -7803338688985450775, guid: 2356b45dacc3bb64fac0f7d6b4a05257, type: 3}
+    GamepadSprite: {fileID: -8976034608957402666, guid: 2356b45dacc3bb64fac0f7d6b4a05257, type: 3}
+    GamepadSpritePressed: {fileID: -6013655081863575173, guid: 2356b45dacc3bb64fac0f7d6b4a05257, type: 3}
+  - button: {fileID: 1270113359310473809}
+    KeyboardSprite: {fileID: -4784062940914001875, guid: 606cb781a96e22e4aa8d0753f1f7bc65, type: 3}
+    KeyboardSpritePressed: {fileID: -7403112047604952040, guid: 606cb781a96e22e4aa8d0753f1f7bc65, type: 3}
+    GamepadSprite: {fileID: 192007519755084222, guid: 606cb781a96e22e4aa8d0753f1f7bc65, type: 3}
+    GamepadSpritePressed: {fileID: 5822371155495768320, guid: 606cb781a96e22e4aa8d0753f1f7bc65, type: 3}
+--- !u!114 &6119453247025043171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270113358887067480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6ab7cbc45164d19b20476265c251c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5475422871822376917}
+        m_TargetAssemblyTypeName: InputDeviceChangedUpdater, Assembly-CSharp
+        m_MethodName: OnInputDeviceChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: ff8b8c3e569e023418073f7f704ce5e4, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &1270113359310473815
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,10 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4784062940914001875
-    second: ButtonSplit_0
+    second: Keyboard_Split
   - first:
       213: -7403112047604952040
-    second: ButtonSplit_1
+    second: Keyboard_Split_Pressed
+  - first:
+      213: 192007519755084222
+    second: Gamepad_Split
+  - first:
+      213: 5822371155495768320
+    second: Gamepad_Split_Pressed
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,15 +127,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonSplit_0
+      name: Keyboard_Split
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 25
         width: 40
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,15 +148,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButtonSplit_1
+      name: Keyboard_Split_Pressed
       rect:
         serializedVersion: 2
         x: 40
-        y: 0
+        y: 25
         width: 40
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,6 +164,48 @@ TextureImporter:
       bones: []
       spriteID: 814971ae0dcd24990800000000000000
       internalID: -7403112047604952040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad_Split
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1a43962d52aa200800000000000000
+      internalID: 192007519755084222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad_Split_Pressed
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0015ec9b7b73dc050800000000000000
+      internalID: 5822371155495768320
       vertices: []
       indices: 
       edges: []

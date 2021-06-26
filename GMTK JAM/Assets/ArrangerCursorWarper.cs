@@ -27,11 +27,21 @@ public class ArrangerCursorWarper : MonoBehaviour
             }
     }
 
+    public void SetUpMouse()
+    {
+        WarpMouse(Vector2.zero);
+    }
+
     void Navigate(InputAction.CallbackContext _context)
     {
         if (!LevelIsArranged.Value) return;
 
         Vector2 _input = _context.ReadValue<Vector2>();
+        WarpMouse(_input);
+    }
+
+    void WarpMouse(Vector2 _input)
+    {
         UpdateIndex(_input);
 
         Vector2 _screenPos = Camera.main.WorldToScreenPoint(levelBits[index]);

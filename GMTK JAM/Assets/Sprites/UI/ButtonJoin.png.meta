@@ -4,10 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -2636446900402747224
-    second: ButtonJoin_0
+    second: Keyboard_Join
   - first:
       213: -7803338688985450775
-    second: ButtonJoin_1
+    second: Keyboard_Join_Pressed
+  - first:
+      213: -8976034608957402666
+    second: Gamepad_Join
+  - first:
+      213: -6013655081863575173
+    second: Gamepad_Join_Pressed
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,15 +127,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonJoin_0
+      name: Keyboard_Join
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 25
         width: 40
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,15 +148,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButtonJoin_1
+      name: Keyboard_Join_Pressed
       rect:
         serializedVersion: 2
         x: 40
-        y: 0
+        y: 25
         width: 40
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,6 +164,48 @@ TextureImporter:
       bones: []
       spriteID: 9e6b5f46ec8f4b390800000000000000
       internalID: -7803338688985450775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad_Join
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d15b798418be6380800000000000000
+      internalID: -8976034608957402666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gamepad_Join_Pressed
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b798cc390943b8ca0800000000000000
+      internalID: -6013655081863575173
       vertices: []
       indices: 
       edges: []

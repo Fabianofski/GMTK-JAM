@@ -22,11 +22,14 @@ public class UI_Events:MonoBehaviour
     [SerializeField] bool checkMouseInput = false;
     EventSystem eventSystem;
     [SerializeField] InputActionAsset inputAsset;
+    [SerializeField] BoolVariable PlayerCanMove;
 
     private void Start()
     {
         if (UpdateUIEvent)
             UpdateUIEvent.Raise();
+
+        Cursor.visible = SceneManager.GetActiveScene().buildIndex == 0;
 
         if (!checkMouseInput) return;
         eventSystem = EventSystem.current;
@@ -123,5 +126,12 @@ public class UI_Events:MonoBehaviour
         GameObject _selectedElement = eventSystem.currentSelectedGameObject;
         if(!_selectedElement)
             eventSystem.SetSelectedGameObject(selectedElement);
+    }
+
+    public void PauseGame(bool _isPaused)
+    {
+        PlayerCanMove.Value = !_isPaused;
+        Cursor.visible = _isPaused;
+        Time.timeScale = _isPaused ? 0 : 1;
     }
 }

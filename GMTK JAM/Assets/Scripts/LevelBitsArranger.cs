@@ -33,6 +33,7 @@ public class LevelBitsArranger : MonoBehaviour
         if (GameEnded.Value) return;
 
         PlayerCanMove.Value = !_defaultPos;
+        Cursor.visible = false;
 
         GameObject _sound = Instantiate(_defaultPos ? SplitApartSound : JoinTogetherSound);
         Destroy(_sound, 1f);
@@ -74,6 +75,7 @@ public class LevelBitsArranger : MonoBehaviour
         { _child.localScale = new Vector2(value, value); }).setOnComplete(() =>
         {
             LevelIsArranged.Value = true;
+            Cursor.visible = true;
         });
     }
 

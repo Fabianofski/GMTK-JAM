@@ -14,10 +14,12 @@ public class PlayerInputController : MonoBehaviour
     [SerializeField] BoolEventReference FireEvent;
     [SerializeField] BoolEventReference SplitEvent;
     [SerializeField] BoolReference LevelIsArranged;
+    [SerializeField] BoolReference GameEnded;
+    [SerializeField] BoolReference GamePaused;
     bool canSplit = true;
     public void OnSplit()
     {
-        if (!canSplit) return;
+        if (!canSplit || GameEnded.Value) return;
         if(SplitEvent.Event)
             SplitEvent.Event.Raise(!LevelIsArranged.Value);
 
@@ -28,6 +30,11 @@ public class PlayerInputController : MonoBehaviour
     void ResetSplit()
     {
         canSplit = true;
+    }
+
+    public void OnPause()
+    {
+        GamePaused.Value = !GamePaused.Value;
     }
 
     public void OnFire(InputValue _value)
