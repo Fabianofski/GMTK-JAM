@@ -24,6 +24,7 @@ public class UI_Events:MonoBehaviour
     [SerializeField] InputActionAsset inputAsset;
     [SerializeField] BoolVariable PlayerCanMove;
     [SerializeField] BoolVariable LevelIsArranged;
+    [SerializeField] BoolVariable GamePaused;
     [SerializeField] LeanTweenType TransitionInType;
     [SerializeField] LeanTweenType TransitionOutType;
 
@@ -39,6 +40,11 @@ public class UI_Events:MonoBehaviour
         selectedElement = eventSystem.currentSelectedGameObject;
         inputAsset.Enable();
         inputAsset.FindActionMap("UI").FindAction("Navigate").performed += _ => OnKeyboardMove();
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        Cursor.visible = LevelIsArranged.Value || GamePaused.Value;
     }
 
     public void ToggleUIElement(GameObject _UIElement)

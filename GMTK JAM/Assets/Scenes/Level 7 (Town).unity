@@ -16354,6 +16354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+--- !u!1 &6153818919633866188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5950638866695183493, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+  m_PrefabInstance: {fileID: 6153818919633866187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8343746746050326014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16361,6 +16366,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 639635969}
     m_Modifications:
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 6153818919633866188}
     - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
       propertyPath: SwitchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -12,6 +12,7 @@ public class ArrangerCursorWarper : MonoBehaviour
     int index;
 
     [SerializeField] BoolReference LevelIsArranged;
+    [SerializeField] BoolReference GamePaused;
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class ArrangerCursorWarper : MonoBehaviour
 
     void Navigate(InputAction.CallbackContext _context)
     {
-        if (!LevelIsArranged.Value) return;
+        if (!LevelIsArranged.Value || GamePaused.Value) return;
 
         Vector2 _input = _context.ReadValue<Vector2>();
         WarpMouse(_input);

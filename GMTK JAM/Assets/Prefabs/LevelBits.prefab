@@ -165,3 +165,9 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
     _variableInstancer: {fileID: 0}
+  GamePaused:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 4fe69dc66a4de314089c6731191aa4d2, type: 2}
+    _variableInstancer: {fileID: 0}

@@ -15,8 +15,7 @@ public class Block : MonoBehaviour
     SpriteRenderer spriteRenderer;
     [SerializeField] GameObject HitSound;
     [SerializeField] bool isOneTimeUse = true;
-    [SerializeField] BoolUnityEvent SwitchEvent;
-    [SerializeField] BoolUnityEvent NotSwitchEvent;
+    [SerializeField] GameObject[] ToggleGameObjects;
     bool collected;
 
 
@@ -50,8 +49,8 @@ public class Block : MonoBehaviour
             GetComponent<Animator>().enabled = false;
 
         spriteRenderer.sprite = spriteRenderer.sprite != altBlock ? altBlock : ogBlock;
-        SwitchEvent.Invoke(spriteRenderer.sprite == altBlock);
-        NotSwitchEvent.Invoke(spriteRenderer.sprite != altBlock);
+        foreach (GameObject _gameObject in ToggleGameObjects)
+            _gameObject.SendMessage("Toggle");
     }
 
 }

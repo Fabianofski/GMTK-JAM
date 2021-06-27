@@ -89,6 +89,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+--- !u!1 &572567617714523625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5950638866695183493, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+  m_PrefabInstance: {fileID: 6153818917744398700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &572567617714523624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5950638866695183492, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
@@ -111,6 +116,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4070659141426448173}
     m_Modifications:
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 572567617714523625}
     - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
       propertyPath: SwitchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

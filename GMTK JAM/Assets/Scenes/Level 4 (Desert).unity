@@ -6431,6 +6431,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4594469018145793253, guid: 021b03bce949c7148a8fc3337cddb3ce, type: 3}
   m_PrefabInstance: {fileID: 908992420}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &934683017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5950638866695183493, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+  m_PrefabInstance: {fileID: 6371627433386220962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &950525806
 GameObject:
   m_ObjectHideFlags: 0
@@ -6972,6 +6977,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98e1d5f82c5b9484286e47708494712f, type: 3}
+--- !u!1 &1712437632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5950638866695183493, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+  m_PrefabInstance: {fileID: 654551053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1751261166
 GameObject:
   m_ObjectHideFlags: 0
@@ -9656,6 +9666,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 908992421}
     m_Modifications:
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 934683017}
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1712437632}
     - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
       propertyPath: SwitchEvent.m_PersistentCalls.m_Calls.Array.size
       value: 2

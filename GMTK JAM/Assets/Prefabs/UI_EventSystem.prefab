@@ -95,8 +95,9 @@ MonoBehaviour:
   threshold: 4.9
   checkMouseInput: 1
   inputAsset: {fileID: -944628639613478452, guid: 172b8003c7f48c3439abe63d27ed002d, type: 3}
-  PlayerCanMove: {fileID: 0}
+  PlayerCanMove: {fileID: 11400000, guid: 99723da5c7c1cdf4c8be7b22d6aad446, type: 2}
   LevelIsArranged: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
+  GamePaused: {fileID: 11400000, guid: 4fe69dc66a4de314089c6731191aa4d2, type: 2}
   TransitionInType: 12
   TransitionOutType: 26
 --- !u!114 &7043791351639193191

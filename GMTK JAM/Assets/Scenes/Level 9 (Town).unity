@@ -21164,6 +21164,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5950638865692748569, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
   m_PrefabInstance: {fileID: 1000946929}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1000946933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5950638866695183493, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+  m_PrefabInstance: {fileID: 1000946929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1107649298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21542,6 +21547,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 7018568338842286224, guid: d532298d587a0c441aea3826fbaa4c5c, type: 3}
+      propertyPath: ToggleGameObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7018568338842286224, guid: d532298d587a0c441aea3826fbaa4c5c, type: 3}
+      propertyPath: ToggleGameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1000946933}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d532298d587a0c441aea3826fbaa4c5c, type: 3}
 --- !u!1001 &1574604281
@@ -24945,6 +24958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+--- !u!1 &6153818919633866188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5950638866695183493, guid: 548129af7b00a484e928c4d8ef494b97, type: 3}
+  m_PrefabInstance: {fileID: 6153818919633866187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8343746746050326014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24952,6 +24970,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1166642526}
     m_Modifications:
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
+      propertyPath: ToggleGameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 6153818919633866188}
     - target: {fileID: 1345458922554182089, guid: 42b8d22778e9a63448820c1535ddcb40, type: 3}
       propertyPath: SwitchEvent.m_PersistentCalls.m_Calls.Array.size
       value: 2
