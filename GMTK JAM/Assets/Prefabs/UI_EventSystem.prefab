@@ -97,6 +97,8 @@ MonoBehaviour:
   inputAsset: {fileID: -944628639613478452, guid: 172b8003c7f48c3439abe63d27ed002d, type: 3}
   PlayerCanMove: {fileID: 0}
   LevelIsArranged: {fileID: 11400000, guid: 15bf3abf0ee21cb449c2b58670199acc, type: 2}
+  TransitionInType: 12
+  TransitionOutType: 26
 --- !u!114 &7043791351639193191
 MonoBehaviour:
   m_ObjectHideFlags: 0

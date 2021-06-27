@@ -41,7 +41,7 @@ public class Goal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && GoalIsUnlocked.Value && !LevelIsArranged.Value)
+        if (collision.CompareTag("Player") && GoalIsUnlocked.Value && !LevelIsArranged.Value && !GameEnded.Value)
         {
             collision.transform.position = transform.position;
             Debug.Log("Reached Goal");

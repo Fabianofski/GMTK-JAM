@@ -24,6 +24,8 @@ public class UI_Events:MonoBehaviour
     [SerializeField] InputActionAsset inputAsset;
     [SerializeField] BoolVariable PlayerCanMove;
     [SerializeField] BoolVariable LevelIsArranged;
+    [SerializeField] LeanTweenType TransitionInType;
+    [SerializeField] LeanTweenType TransitionOutType;
 
     private void Start()
     {
@@ -139,5 +141,21 @@ public class UI_Events:MonoBehaviour
         PlayerCanMove.Value = !_isPaused && !LevelIsArranged.Value;
         Cursor.visible = _isPaused;
         Time.timeScale = _isPaused ? 0 : 1;
+    }
+
+    public void TransitionUIElement(GameObject _UIElement)
+    {
+        bool _popIn = !_UIElement.activeSelf;
+        _UIElement.SetActive(true);
+
+        LeanTween.scale(_UIElement, _popIn ? Vector2.one : Vector2.zero, .3f)
+            .setEase(_popIn ? TransitionInType : TransitionOutType)
+            .setIgnoreTimeScale(true)
+            .setOnComplete(() => 
+            { 
+                if (!_popIn) 
+                    _UIElement.SetActive(false); 
+            });
+
     }
 }
