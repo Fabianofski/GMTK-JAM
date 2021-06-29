@@ -19,7 +19,7 @@ public class UI_Events:MonoBehaviour
     bool mouseIsMoving;
     [SerializeField] GameObject selectedElement;
     [SerializeField] float threshold;
-    [SerializeField] bool checkMouseInput = false;
+    [SerializeField] bool checkSelectedElement = false;
     EventSystem eventSystem;
     [SerializeField] InputActionAsset inputAsset;
     [SerializeField] BoolVariable PlayerCanMove;
@@ -35,7 +35,7 @@ public class UI_Events:MonoBehaviour
 
         Cursor.visible = SceneManager.GetActiveScene().buildIndex == 0;
 
-        if (!checkMouseInput) return;
+        if (!checkSelectedElement) return;
         eventSystem = EventSystem.current;
         selectedElement = eventSystem.currentSelectedGameObject;
         inputAsset.Enable();
@@ -44,7 +44,8 @@ public class UI_Events:MonoBehaviour
 
     private void OnApplicationFocus(bool focus)
     {
-        Cursor.visible = LevelIsArranged.Value || GamePaused.Value;
+        if(LevelIsArranged && GamePaused)
+            Cursor.visible = LevelIsArranged.Value || GamePaused.Value;
     }
 
     public void ToggleUIElement(GameObject _UIElement)
@@ -66,6 +67,11 @@ public class UI_Events:MonoBehaviour
     public void LoadMenuScene()
     {
         SceneManager.LoadScene(0);
+    }
+    
+    public void LoadLevel(int _index)
+    {
+        SceneManager.LoadScene(_index);
     }
 
     public void RestartScene()
@@ -116,23 +122,16 @@ public class UI_Events:MonoBehaviour
 
     private void Update()
     {
-        if(checkMouseInput)
-            OnMouseMove();
+        if(checkSelectedElement)
+            SaveSelectedElement();
     }
 
-    public void OnMouseMove()
+    public void SaveSelectedElement()
     {
-        float _MouseMag = (Mouse.current.position.ReadValue() - oldMousePos).magnitude;
-        mouseIsMoving = Mathf.Abs(_MouseMag) > threshold;
         GameObject _selectedElement = eventSystem.currentSelectedGameObject;
 
-        if(mouseIsMoving && _selectedElement)
-        {
+        if(_selectedElement)
             selectedElement = _selectedElement;
-            eventSystem.SetSelectedGameObject(null);
-        }
-
-        oldMousePos = Mouse.current.position.ReadValue();
     }
 
     private void OnKeyboardMove()
@@ -163,5 +162,10 @@ public class UI_Events:MonoBehaviour
                     _UIElement.SetActive(false); 
             });
 
+    }
+
+    public void OpenBrowserURL(string url)
+    {
+        Application.OpenURL(url);
     }
 }
