@@ -1,7 +1,7 @@
 # IUNIGO - GMTK-JAM-2021
  
-![Twitter URL](https://img.shields.io/twitter/url?label=F4B1&style=social&url=https%3A%2F%2Ftwitter.com%2FF4B1_GameDev)
-![Twitter URL](https://img.shields.io/twitter/url?label=santumerino&style=social&url=https%3A%2F%2Ftwitter.com%2Fsantumerino)
+![Twitter Follow](https://img.shields.io/twitter/follow/F4B1_GameDev?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/santumerino?style=social)
  
 <!-- ABOUT THE PROJECT -->
 ## About The Project
