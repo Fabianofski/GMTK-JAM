@@ -31,6 +31,14 @@ To open the project do the following:
    ```
 4. Open the Project in Unity Hub
 
+## License
+
+### Code
+The Unity Project and all scripts are licensed under MIT License. See 'License.md' for more information
+
+### Assets
+Unless mentioned otherwise, all art, sound and music assets are distributed under the [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/) license.
+
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
